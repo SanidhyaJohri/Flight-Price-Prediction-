@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Traveler &mdash; Predict your Flight Price Today!!</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="gtco-loader"></div>
+	
+	<div id="page">
+
+	
+	<!-- <div class="page-inner"> -->
+	<nav class="gtco-nav" role="navigation">
+		<div class="gtco-container">
+			
+			<div class="row">
+				<div class="col-sm-4 col-xs-12">
+					<div id="gtco-logo"><a href="index.html">Traveler <em>.</em></a></div>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+	
+	<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(images/img_bg_2.jpg);width:100%;height:100%;">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-left">
+
+					<div class="row row-mt-15em">
+						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+							<h1>Planing Trip To Anywhere in The World?</h1>	
+							<h2 id="predictedPrice" style="display:none;"></h2>
+						</div>
+						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+							<div class="form-wrap" >
+								<div class="tab">
+
+									
+									<div class="tab-content">
+										<div class="tab-content-inner active" data-content="signup">
+											<h3>Flight Details:	</h3>
+											<form action="#">
+
+												<div class="row form-group">
+													<div class="col-md-6">
+														<label for="airline">Airline: </label>
+														<select name="#" id="airline" class="form-control">
+															<option value=''>--Select--</option>
+															<option value=0>Air Asia</option>
+															<option value=1>Air India</option>
+															<option value=2>GoAir</option>
+															<option value=3>Indigo</option>
+															<option value=4>Jet Airways</option>
+															<option value=5>Jet Airways Business</option>
+															<option value=6>Multiple carriers</option>
+															<option value=7>Multiple carriers Premium economy</option>
+															<option value=8>SpiceJet</option>
+															<option value=9>TruJet</option>
+															<option value=10>Vistara</option>
+															<option value=11>Vistara Premium economy</option>
+														</select>
+													</div>
+													<div class="col-md-6">
+														<label for="date-start">Date Travel: </label>
+														<input type="date" id="date" class="form-control">
+													</div>
+												</div>
+
+												<div class="row form-group">
+													<div class="col-md-6">
+														<label for="from">From: </label>
+														<select name="#" id="from" class="form-control">
+															<option value=''>--Select--</option>
+															<option value=0>Banglore</option>
+															<option value=1>Chennai</option>
+															<option value=2>Delhi</option>
+															<option value=3>Kolkata</option>
+															<option value=4>Mumbai</option>
+														</select>
+													</div>
+													<div class="col-md-6">
+														<label for="to">To: </label>
+														<select name="#" id="to" class="form-control">
+															<option value=''>--Select--</option>
+															<option value=0>Banglore</option>
+															<option value=1>Chennai</option>
+															<option value=2>Delhi</option>
+															<option value=3>Kolkata</option>
+															<option value=4>Mumbai</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="row form-group">
+													<div class="col-md-6">
+														<label for="departureTime">Departure Time:</label>
+														<input type="time" class="form-control" id="departureTime" name="DepartureTime"/>
+													</div>
+													<div class="col-md-6">
+														<label for="arrivalTime">Arrival Time:</label>
+														<input type="time" class="form-control" id="arrivalTime" name="ArrivalTime"/>
+													</div>
+												</div>
+
+												<div class="row form-group">
+													
+												</div>
+
+												<div class="row form-group">
+													<div class="col-md-6">
+														<label for="fullname">Duration:</label>
+														<input type="text" class="form-control" placeholder="xxH yyM" id="duration" name="duration"/>
+													</div>
+													<div class="col-md-6">
+														<label for="totalstops">Number of Stops: </label>
+														<select name="#" id="totalStops" class="form-control">
+															<option value=''>--Select--</option>
+															<option value=0>0</option>
+															<option value=1>1</option>
+															<option value=2>2</option>
+															<option value=3>3</option>
+															<option value=4>4</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="row form-group">
+													<div class="col-md-12">
+														<button type="button" onclick='validate()' class="btn btn-primary btn-block">Submit</button>
+														<!-- <input type="submit" class="btn btn-primary btn-block" value="Submit"> -->
+													</div>
+												</div>
+											</form>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+					<small class="block" style="position:relative;left:40%;color:white; padding-bottom: 0%;">&copy; Sanidhya S. Johri. All Rights Reserved.</small> 	
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Script to predict the Price Starts Here-->
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.5.2/dist/tf.min.js"></script>
+
+	<script>
+		tf.loadLayersModel("NeuralNet/model.json").then(function(model) {
+			window.model = model;
+			console.log("my model loaded");
+			});
+
+		function validate(){
+			var dateHere = document.getElementById('date').value;
+			var duration = document.getElementById('duration').value;
+			var depTime = document.getElementById('departureTime').value;
+			var arrivalTime = document.getElementById('arrivalTime').value;
+			var airline = document.getElementById('airline').value;
+			var totalStops = document.getElementById('totalStops').value;
+			var from = document.getElementById('from').value;
+			var to = document.getElementById('to').value;
+
+			if(dateHere==''){
+				alert("Enter the Date");
+			}
+			else if(duration==''){
+				alert("Enter the Duration of Journey");
+			}
+			else if(depTime==''){
+				alert("Enter the Departure Time");
+			}
+			else if(arrivalTime==''){
+				alert("Enter the Arrival Time");
+			}
+			else if(airline ==''){
+				alert("Enter the Airline");
+			}
+			else if(totalStops==''){
+				alert("Enter the Total Stops");
+			}
+			else if(from ==''){
+				alert("Enter the Location of Departure");
+			}
+			else if(to ==''){
+				alert("Enter the Location of Arrival");
+			}
+			else{
+				predict();
+			}
+		}
+		function predict(){
+			// Fetching data from front-end and Pre-Processing
+			var input=[];
+
+			var airline = document.getElementById("airline").value;
+
+			var dateOfJourney= document.getElementById('date').value;
+			dateOfJourney = dateOfJourney.split('-')
+			dateOfJourney = dateOfJourney[2]
+
+			var monthOfJourney= document.getElementById('date').value;
+			monthOfJourney = monthOfJourney.split('-')
+			monthOfJourney = monthOfJourney[1]
+
+			var source = document.getElementById("from").value;
+
+			var destination = document.getElementById("to").value;
+
+			var depTime = document.getElementById("departureTime").value;
+			depTime = depTime.split(':');
+
+			var depHour = depTime[0];
+			var depMin = depTime[1];
+
+			var arrTime = document.getElementById("arrivalTime").value;
+			arrTime = arrTime.split(':');
+
+			var arrHour = arrTime[0];
+			var arrMin = arrTime[1];
+
+			var duration=document.getElementById('duration').value;
+			var a = duration.split(' ');
+			if(a.length==2){
+				var temp='';
+				for(var i=0;i<a[0].length-1;i=i+1){
+					temp=temp+a[0][i]
+				}
+				duration=(+temp)*60;
+				temp='';
+				for(var i=0;i<a[1].length-1;i=i+1){
+					temp=temp+a[1][i]
+				}
+				duration+=(+temp)*1;
+			}
+			else{
+				var temp='';
+				for(var i=0;i<a[0].length-1;i=i+1){
+					temp=temp+a[0][i]
+				}
+				duration=(+temp)*60;
+			}
+
+			var totalStops=document.getElementById('totalStops').value;
+			var additionalInfo=7;
+
+			input=[parseInt(airline),parseInt(source),parseInt(destination),parseInt(duration),parseInt(totalStops),parseInt(additionalInfo),parseInt(dateOfJourney),parseInt(monthOfJourney),parseInt(depHour),parseInt(depMin),parseInt(arrHour),parseInt(arrMin)];
+
+			// Convert input array to tensor of shape 1x12 and predict the price
+
+			window.model.predict([tf.tensor(input).reshape([1,12])]).array().then(function(scores){
+				scores = scores[0];
+				console.log(scores[0]);
+				document.getElementById('predictedPrice').style.display="block";
+				// document.getElementById('boxPricePredicted').style.display="block";
+
+				document.getElementById('predictedPrice').innerHTML="Predicted Flight Price is :  INR " + scores[0].toFixed(2).toString(); 
+
+			});
+			console.log(scores)
+		}
+
+	</script>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	
+	<!-- Datepicker -->
+	<script src="js/bootstrap-datepicker.min.js"></script>
+	
+
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
